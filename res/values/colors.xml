@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="lighter_grey">#f3f3f3</color>
+    <color name="hs18_orange">#ff9900</color>
+    <color name="hs18_orange_dark">#ff830f</color>
+    <color name="hs18_orange_light">#ffb84d</color>
+    <color name="hs18_light_grey">#cfcfcf</color>
+    <color name="grey">#757575</color>
+</resources>

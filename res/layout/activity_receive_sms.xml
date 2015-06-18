@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:padding="10dp">
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/lv_receive_sms_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_grey"
+        android:cacheColorHint="#00000000"
+        android:divider="#00000000"
+        android:dividerHeight="8dp"
+        android:listSelector="#00000000" />
+
+    <ImageButton
+        android:id="@+id/image_button_compose"
+        android:layout_width="@dimen/round_button_diameter"
+        android:layout_height="@dimen/round_button_diameter"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="@dimen/add_button_margin"
+        android:layout_marginEnd="@dimen/add_button_margin"
+        android:background="@drawable/oval"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white" />
+
+</FrameLayout>

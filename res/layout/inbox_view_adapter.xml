@@ -1,0 +1,66 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_grey"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:visibility="visible" >
+
+    <RelativeLayout
+        android:id="@+id/rl_sms_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_grey"
+        android:visibility="visible"
+        android:padding="5dp" >
+
+        <CheckBox
+            android:id="@+id/cb_sms_adapter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" 
+            android:clickable="false"
+            android:checked="true"
+            android:visibility="gone"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+        <TextView
+            android:id="@+id/tv_receive_sms_adapter_date"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="right"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_receive_sms_adapter_msg_boby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_receive_sms_adapter_contact"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="12dp"
+            android:textColor="#000000"
+            android:textSize="12sp"
+            android:textStyle="normal" />
+
+        <TextView
+            android:id="@+id/tv_receive_sms_adapter_contact"
+            android:layout_width="130dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/tv_receive_sms_adapter_date"
+            android:layout_alignBottom="@+id/tv_receive_sms_adapter_date"
+            android:layout_marginLeft="19dp"
+            android:layout_toRightOf="@+id/cb_sms_adapter"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+
+</LinearLayout>

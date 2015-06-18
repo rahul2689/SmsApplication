@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_grey"
+    android:orientation="vertical"
+    tools:context=".StartUpActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:background="@drawable/border_grey"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_main_activity_app_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="56dp"
+            android:capitalize="characters"
+            android:text="@string/androidSms"
+            android:textSize="34dp" />
+
+        <Button
+            android:id="@+id/button_main_activity_inbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/inbox_text" 
+            style="@style/orange_button_style"/>
+        
+        <Button
+            android:id="@+id/button_main_activity_outbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/outbox_text" 
+            style="@style/orange_button_style"/>
+
+        <Button
+            android:id="@+id/button_main_activity_compose"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:text="@string/compose_text"
+            style="@style/orange_button_style" />
+    </LinearLayout>
+
+</LinearLayout>

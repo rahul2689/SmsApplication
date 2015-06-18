@@ -1,0 +1,90 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lighter_grey"
+    android:orientation="vertical"
+    android:padding="20dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/border_grey"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/tv_send_sms_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:text="Compose New Message" />
+
+        <TextView
+            android:id="@+id/tv_send_sms_phone_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="Phone Number" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/et_send_sms_phone_no_"
+                android:layout_width="140dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:background="@drawable/border_grey"
+                android:inputType="phone" 
+                android:paddingLeft="10dp"/>
+
+            <Button
+                android:id="@+id/button_send_sms_add_contact"
+                style="@style/orange_button_style"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:text="Add Contact"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:text="SMS Message" />
+
+        <EditText
+            android:id="@+id/editTextSMS"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/border_grey"
+            android:inputType="textMultiLine"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="10dp" 
+            android:paddingLeft="10dp"/>
+
+        <Button
+            android:id="@+id/btnSendSMS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Send" 
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            style="@style/orange_button_style"/>
+
+    </LinearLayout>
+
+</LinearLayout>
