@@ -148,6 +148,8 @@ public class ComposeSmsActivity extends Activity {
 					case Activity.RESULT_OK:
 						Toast.makeText(getBaseContext(), "SMS sent",
 								Toast.LENGTH_SHORT).show();
+						mPhoneNumberEt.setText("");
+						mSmsMessageEt.setText("");		
 						break;
 					case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
 						Toast.makeText(getBaseContext(), "Generic failure",
