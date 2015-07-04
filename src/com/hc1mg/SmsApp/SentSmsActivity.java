@@ -45,7 +45,8 @@ public class SentSmsActivity extends Activity {
 		mSmsListView = (SwipeMenuListView) findViewById(R.id.lv_sent_sms_list);
 		mImageButton = (ImageButton) findViewById(R.id.image_button_compose);
 		refreshSmsOutbox();
-		smsAdapter = new SmsAdapter(getApplicationContext(), smsMessagesList);
+		smsAdapter = new SmsAdapter(SentSmsActivity.this);
+		smsAdapter.updateMsgList(smsMessagesList);
 		mSmsListView.setAdapter(smsAdapter);
 		mImageButton.setOnClickListener(new OnClickListener() {
 			@Override
