@@ -19,9 +19,9 @@ public class SmsAdapter extends BaseAdapter {
 	private Context mContext;
 	private ViewHolder viewHolder;
 
-	public SmsAdapter(Context context, List<SmsInfo> smsMessagesList) {
+	public SmsAdapter(Context context) {
 		mContext = context;
-		mMessageList = smsMessagesList;
+		mMessageList = new ArrayList<SmsInfo>();
 	}
 
 	@Override
@@ -119,5 +119,9 @@ public class SmsAdapter extends BaseAdapter {
 			mSmsCheckBox = (CheckBox) convertView
 					.findViewById(R.id.cb_sms_adapter);
 		}
+	}
+	public void updateMsgList(List<SmsInfo> smsMessagesList) {
+		mMessageList = smsMessagesList;
+		notifyDataSetChanged();
 	}
 }
