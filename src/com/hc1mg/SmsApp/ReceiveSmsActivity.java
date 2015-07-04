@@ -53,21 +53,11 @@ public class ReceiveSmsActivity extends Activity implements OnItemClickListener 
 	}
 
 	@Override
-	public void onStart() {
-		super.onStart();
-		inst = this;
-	}
-
-	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_receive_sms);
 		smsListView = (SwipeMenuListView) findViewById(R.id.lv_receive_sms_list);
-		List<SmsInfo> listRead = refreshSmsInboxRead();
-		List<SmsInfo> listUnread = refreshSmsInboxUnread();
-		smsMessagesList.addAll(listRead);
-		smsMessagesList.addAll(listUnread);
-		smsAdapter = new SmsAdapter(getApplicationContext(), smsMessagesList);
+		smsAdapter = new SmsAdapter(ReceiveSmsActivity.this);
 		smsListView.setAdapter(smsAdapter);
 		mImageButton = (ImageButton) findViewById(R.id.image_button_compose);
 		smsListView.setOnItemClickListener(this);
@@ -83,6 +73,21 @@ public class ReceiveSmsActivity extends Activity implements OnItemClickListener 
 		smsListView.setOnMenuItemClickListener(swipeItemClickListener());
 	}
 
+	@Override
+	public void onStart() {
+		List<SmsInfo> listRead = refreshSmsInboxRead();
+		List<SmsInfo> listUnread = refreshSmsInboxUnread();
+		smsMessagesList.addAll(listUnread);
+		smsMessagesList.addAll(listRead);
+		smsAdapter.updateMsgList(smsMessagesList);
+		super.onStart();
+		inst = this;
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+	}
 	private OnMenuItemClickListener swipeItemClickListener() {
 		return new OnMenuItemClickListener() {
 			@Override
